@@ -9,20 +9,16 @@ include_directories(${CMAKE_SOURCE_DIR})
 
 # Add source files for tshirt tests
 set(tShirtTest_src
-    #tests/tshirtsTests.cpp
     tshirts.cpp
 )
 
 # Add source files for color map misaligned tests
 set(misalignedTest_src
-    #tests/misalignedTests.cpp
     misaligned.cpp
 )
 
 # Add source files for weather report tests
 set(weatherReportTests_src
-    #tests/weatherReportTests.cpp
-    sensorStub.cpp
     weatherReport.cpp
 )
 
