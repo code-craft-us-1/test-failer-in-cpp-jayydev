@@ -3,14 +3,27 @@
 #include <string>
 
 namespace WeatherSpace {
+    /// @brief Interface for a weather sensor
     class IWeatherSensor {
         public:
+        /// @brief Get the temperature in Celsius
+        /// @return the temperature in Celsius
         virtual double TemperatureInC() const = 0;
+
+        /// @brief Get the precipitation in percentage
+        /// @return the precipitation in percentage
         virtual int Precipitation() const = 0;
+
+        /// @brief Get the humidity in percentage
+        /// @return the humidity in percentage
         virtual int Humidity() const = 0;
+
+        /// @brief Get the wind speed in KMPH
+        /// @return the wind speed in KMPH
         virtual int WindSpeedKMPH() const = 0;
     };
 
+    /// @brief A stub implementation of a weather sensor    
     class SensorStub : public IWeatherSensor {
     public:
         SensorStub();
@@ -26,7 +39,9 @@ namespace WeatherSpace {
         double m_Temperature = 26;
         int m_WindSpeed = 52;
     };
-
-    // This is a function to predict the weather, based on readings from a sensor
+    
+    /// @brief Predicts the weather based on the sensor readings
+    /// @param sensor the sensor
+    /// @return the weather prediction
     std::string Report(const IWeatherSensor &sensor);
 }
