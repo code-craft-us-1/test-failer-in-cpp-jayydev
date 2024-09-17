@@ -22,7 +22,7 @@ set(misalignedTest_src
 # Add source files for weather report tests
 set(weatherReportTests_src
     #tests/weatherReportTests.cpp
-    tests/sensorStub.cpp
+    sensorStub.cpp
     weatherReport.cpp
 )
 

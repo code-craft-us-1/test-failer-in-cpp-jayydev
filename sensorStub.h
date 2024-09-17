@@ -1,13 +1,10 @@
 #pragma once
 
-#include "../weatherreport.h"
-
+#include "./weatherreport.h"
 #include <string>
 
-namespace WeatherSpace
-{
-    class SensorStub : public IWeatherSensor
-    {
+namespace WeatherSpace {
+    class SensorStub : public IWeatherSensor {
     public:
         SensorStub();
         ~SensorStub() = default;
