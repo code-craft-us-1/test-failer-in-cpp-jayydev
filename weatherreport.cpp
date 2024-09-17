@@ -1,8 +1,8 @@
 #include "./weatherreport.h"
-#include "tests/sensorStub.h"
 #include <assert.h>
 #include <string>
 #include <iostream>
+#include "tests/sensorStub.h"
 
 
 // This is a function to predict the weather, based on readings from a sensor
