@@ -63,10 +63,16 @@ void testPrintColorMap() {
     assert(result == 25);
 }
 
+void testPrintColorMapVisually(bool visuallyOk) {
+    assert(visuallyOk);
+}
+
 int main() {
     testColorMap();
     testPrintContent();
     testPrintColorMap();
+    // pass true when visually inspecting the output and its good
+    testPrintColorMapVisually(false);
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
