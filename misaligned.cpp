@@ -2,9 +2,8 @@
 #include <assert.h>
 #include <iostream>
 
-
-std::vector<std::pair<std::string, std::string>> createColorMap(const char* majorColor[], unsigned numMajorColors, const char* minorColor[], unsigned numMinorColors) 
-{
+std::vector<std::pair<std::string, std::string>> createColorMap(const char* majorColor[], 
+unsigned numMajorColors, const char* minorColor[], unsigned numMinorColors) {
     std::vector<std::pair<std::string, std::string>> colorMap;    
     for (unsigned i = 0; i < numMajorColors; i++) 
     {
@@ -16,8 +15,8 @@ std::vector<std::pair<std::string, std::string>> createColorMap(const char* majo
     return colorMap;
 }
 
-std::vector<std::string> generatePrintContent(const std::vector<std::pair<std::string, std::string>>& colorMap) 
-{
+std::vector<std::string> generatePrintContent(
+    const std::vector<std::pair<std::string, std::string>>& colorMap) {
     std::vector<std::string> printContent;
     int i = 1;
     for(auto pair : colorMap)
@@ -27,8 +26,7 @@ std::vector<std::string> generatePrintContent(const std::vector<std::pair<std::s
     return printContent;
 }
 
-size_t printColorMap() 
-{
+size_t printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     auto colorMap = createColorMap(majorColor, 5, minorColor, 5);

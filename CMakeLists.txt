@@ -5,6 +5,8 @@ project(MultiExecutableProject)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+include_directories(${CMAKE_SOURCE_DIR})
+
 # Add source files for tshirt tests
 set(tShirtTest_src
     tests/tshirtsTests.cpp
