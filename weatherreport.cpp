@@ -1,8 +1,9 @@
 #include "./weatherreport.h"
 #include "tests/sensorStub.h"
+#include <assert.h>
 #include <string>
 #include <iostream>
-#include <assert.h>
+
 
 // This is a function to predict the weather, based on readings from a sensor
 std::string WeatherSpace::Report(const IWeatherSensor &sensor) {
