@@ -1,18 +1,18 @@
 #include "./sensorStub.h"
 
 using std::string;
-using namespace WeatherSpace;
+using WeatherSpace::SensorStub;
 
 SensorStub::SensorStub()
-    : m_Humidity(72), 
-    m_Precipitation(70), 
-    m_Temperature(26), 
+    : m_Humidity(72),
+    m_Precipitation(70),
+    m_Temperature(26),
     m_WindSpeed(52) {
 }
 
-SensorStub::SensorStub(int humidity, int precipitation, int temperature, int windSpeed) 
-    : m_Humidity(humidity), 
-    m_Precipitation(precipitation), 
+SensorStub::SensorStub(int humidity, int precipitation, int temperature, int windSpeed)
+    : m_Humidity(humidity),
+    m_Precipitation(precipitation),
     m_Temperature(temperature),
      m_WindSpeed(windSpeed) {
 }
