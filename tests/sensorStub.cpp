@@ -1,4 +1,4 @@
-#include "sensorStub.h"
+#include "tests/sensorStub.h"
 
 using std::string;
 using namespace WeatherSpace;
