@@ -23,7 +23,7 @@ void testPrintContent() {
     auto generatedContent = generatePrintContent(colorMap);
     assert(generatedContent.size() == 4);
     auto firstRow = generatedContent.at(0);
-    auto pos1 = firstRow.find('|');    
+    auto pos1 = firstRow.find('|');
     auto pos2 = firstRow.find('|', pos1 + 1);
     for (auto content : generatedContent) {
         auto p1 = content.find('|');
@@ -41,8 +41,8 @@ void testPrintColorMap() {
 }
 
 int main() {
-    testColorMap();    
-    testPrintColorMap();    
+    testColorMap();
+    testPrintColorMap();
     testPrintContent();
     std::cout << "All is well (maybe!)\n";
     return 0;
