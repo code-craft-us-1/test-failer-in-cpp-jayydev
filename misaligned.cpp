@@ -22,8 +22,16 @@ void testPrintContent() {
         std::make_pair("Red", "Orange")};
     auto generatedContent = generatePrintContent(colorMap);
     assert(generatedContent.size() == 4);
+    auto firstRow = generatedContent.at(0);
+    auto pos1 = firstRow.find('|');    
+    auto pos2 = firstRow.find('|', pos1 + 1);
     for (auto content : generatedContent) {
-        std::cout << content << std::endl;
+        auto p1 = content.find('|');
+        auto p2 = content.find('|', p1 + 1);
+        assert(p1 != std::string::npos);
+        assert(p2 != std::string::npos);
+        assert(pos1 == p1);
+        assert(pos2 == p2);
     }
 }
 
@@ -32,16 +40,10 @@ void testPrintColorMap() {
     assert(result == 25);
 }
 
-void testPrintColorMapVisually(bool visuallyOk) {
-    assert(visuallyOk);
-}
-
 int main() {
-    testColorMap();
+    testColorMap();    
+    testPrintColorMap();    
     testPrintContent();
-    testPrintColorMap();
-    // pass true when visually inspecting the output and its good
-    testPrintColorMapVisually(false);
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
