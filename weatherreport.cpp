@@ -2,56 +2,13 @@
 #include <assert.h>
 #include <string>
 #include <iostream>
+#include "./sesnsorStub.h"
+#include "./weatherReportGenerator.h"
 
 using std::string;
 using WeatherSpace::SensorStub;
-
-SensorStub::SensorStub()
-    : m_Humidity(72),
-    m_Precipitation(70),
-    m_Temperature(26),
-    m_WindSpeed(52) {
-}
-
-SensorStub::SensorStub(int humidity, int precipitation, int temperature, int windSpeed)
-    : m_Humidity(humidity),
-    m_Precipitation(precipitation),
-    m_Temperature(temperature),
-     m_WindSpeed(windSpeed) {
-}
-
-int SensorStub::Humidity() const {
-    return m_Humidity;
-}
-
-int SensorStub::Precipitation() const {
-    return m_Precipitation;
-}
-
-double SensorStub::TemperatureInC() const {
-    return m_Temperature;
-}
-
-int SensorStub::WindSpeedKMPH() const {
-    return m_WindSpeed;
-}
-
-// This is a function to predict the weather, based on readings from a sensor
-std::string WeatherSpace::Report(const IWeatherSensor &sensor) {
-    int precipitation = sensor.Precipitation();
-    // precipitation < 20 is a sunny day
-    std::string report = "Sunny day";
-
-    if (sensor.TemperatureInC() > 25) {
-        if (precipitation >= 20 && precipitation < 60)
-            report = "Partly cloudy";
-        else if (sensor.WindSpeedKMPH() > 50)
-            report = "Alert, Stormy with heavy rain";
-    }
-    return report;
-}
-
-using std::cout, std::endl, std::string;
+using WeatherSpace::Report;
+using std::cout, std::endl;
 
 // Test a rainy day
 void TestRainy() {
