@@ -6,7 +6,7 @@ namespace WeatherSpace {
     class SensorStub : public IWeatherSensor {
     public:
         SensorStub()
-            : m_Humidity(72), m_Precipitation(70), m_Temperature(26), m_WindSpeed(52) {
+            : m_Humidity(72), m_Precipitation(72), m_Temperature(26), m_WindSpeed(48) {
         }
         SensorStub(int humidity, int precipitation, int temperature, int windSpeed)
             : m_Humidity(humidity), m_Precipitation(precipitation),
