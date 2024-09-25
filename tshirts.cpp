@@ -15,7 +15,7 @@ int main() {
     assert(size(43) == TShirtSizeCategory::L);
     assert(size(70) == TShirtSizeCategory::L);
     assert(size(71) == TShirtSizeCategory::None);
-    assert(size(99) == TShirtSizeCategory::None);    
+    assert(size(99) == TShirtSizeCategory::None);
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
