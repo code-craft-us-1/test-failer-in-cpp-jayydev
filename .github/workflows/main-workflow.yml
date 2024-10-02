@@ -17,16 +17,16 @@ jobs:
       run: |
         g++ -Wall -Wextra -Werror tshirts.cpp -o tshirts.out
         # bash .github/workflows/expectfail.sh ./tshirts.out
-        run: ./tshirts
+        ./tshirts
 
     - name: misaligned fail
       run: |
         g++ -Wall -Wextra -Werror misaligned.cpp -o misaligned.out
         # bash .github/workflows/expectfail.sh ./misaligned.out
-        run: ./misaligned
+        ./misaligned
 
     - name: alerter fail
       run: |
         g++ -Wall -Wextra -Werror weatherreport.cpp -o weatherreport.out
         # bash .github/workflows/expectfail.sh ./weatherreport.out
-        run: ./weatherreport
+        ./weatherreport
